@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart Page</title>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="left-icons">
+
+                <div class="logo">
+                    <a href="home.html">
+                        <h1 class="txt-color">Click & Buy</h1>                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-icons">
+                <a href="profile.html" class="fa-solid fa-user white-things"></a>
+                <a href="allProducts.html"> Shop more</a>
+                <a href="loginRegister.html" class=" white-things">LogIn</a>
+                
+            </div>
+        
+        </div>
+      
+    </header>
+    <section class="main-Container">
+
+        <div class="CartsofCartPage">
+            <div class="single-cart">
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Delete</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Product rows will be appended here -->
+                    </tbody>
+                </table>
+                
+            </div>
+           
+        </div>
+        <div class="totalSumAfterRemove" id="totalSumAfterRemove"></div>
+        <div class="totalSum" id="totalSum"></div>
+       
+        <div class="clearandSum">
+          <div class="clear btn-clear">
+              <button id="btn-clear">
+                    Clear
+              </button>
+          </div>
+          <div class="sum">
+              <!-- <button id="btn-sum">
+                    Sum
+              </button> -->
+          </div>
+        </div>
+        
+      </section>
+    <script type="module" src="./InsertDivIntoCart.js"></script>
+</body>
+</html>

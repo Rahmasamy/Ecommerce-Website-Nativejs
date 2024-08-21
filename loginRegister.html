@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+    
+</head>
+<body>
+    <header>
+        <div class="top-bar backgrd">
+            <div class="left-icons">
+                <div class="logo">
+                    <a href="home.html">
+                        <h1 class="txt-color txt">Click & Buy</h1>                        
+                    </a>
+                </div>
+            </div>
+            <div class="right-icons">
+                <a href="profile.html" class="fa-solid fa-user white-things"></a>
+                <a href="CartPage.html" class="fa-solid fa-cart-shopping icons white-things"></a>
+                <a href="home.html" id="logoutButton">Logout</a>
+                
+            
+        
+        </div>
+        
+    </header>
+    <div class="BigForm-container">
+        <div class="form-container" id="form-container">
+            <div class="row">
+                <div class="col align-items-center flex-col sign-up">
+                    <div class="form-wrapper align-items-center">
+                        <form class="form sign-up" id="signupForm" onsubmit="saveData(event)">
+                            <div class="input-group">
+                                <i class='bx bxs-user'></i>
+                                <input type="text" placeholder="Email" name="email" id="email" required>
+                                <div id="emailError" class="error-message"></div>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bx-mail-send'></i>
+                                <input type="text" placeholder="First Name" name="first_name" id="first_name" required>
+                                <div id="firstNameError" class="error-message"></div>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bx-mail-send'></i>
+                                <input type="text" placeholder="Last Name" name="last_name" id="last_name" required>
+                                <div id="lastNameError" class="error-message"></div>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="text" placeholder="Phone number" name="phone" id="phone" required>
+                                <div id="phoneError" class="error-message"></div>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" placeholder="Password" name="password" id="password" required>
+                                <div id="passwordError" class="error-message"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="gender"><b>Gender</b></label>
+                                <select name="gender" id="gender" class="styled-select">
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </div>
+                            <button type="submit">
+                                Sign up
+                            </button>
+                            <p>
+                                <span>Already have an account?</span>
+                                <b onclick="toggle()" class="pointer">Sign in here</b>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col align-items-center flex-col sign-in">
+                    <div class="form-wrapper align-items-center">
+                        <form class="form sign-in" id="loginForm">
+                            <div class="input-group">
+                                <i class='bx bxs-user'></i>
+                                <input type="email" placeholder="Email" name="email" id="login_email" required>
+                                <div id="emailErrorLogin" style="display:none; color:red;">Please enter a valid email address.</div>
+                            </div>
+                            <div class="input-group">
+                                <i class='bx bxs-lock-alt'></i>
+                                <input type="password" placeholder="Password" name="password" id="login_password" required>
+                            </div>
+                            <div class="clearfix">
+                                <button type="submit" id="submitButton">
+                                    Sign in
+                                </button>
+                            </div>
+                            <p>
+                                <b>Forgot password?</b>
+                            </p>
+                            <p>
+                                <span>Don't have an account?</span>
+                                <b onclick="toggle()" class="pointer">Sign up here</b>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row content-row">
+                <div class="col align-items-center flex-col sign-in-rel">
+                    <div class="text sign-in sign-in-abs">
+                        <h2>Welcome Back</h2>
+                    </div>
+                    <div class="img sign-in"></div>
+                </div>
+                <div class="col align-items-center flex-col">
+                    <div class="img sign-up"></div>
+                    <div class="text sign-up">
+                        <h2>Join Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	
+   
+    <script src="Login.js"></script>
+    <script src="Register.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
