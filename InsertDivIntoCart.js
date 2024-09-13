@@ -45,10 +45,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         totalPriceDiv.id = 'total-price';
        
         totalPriceDiv.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
-        totalSum.appendChild(totalPriceDiv);
-        btnClear.addEventListener('click', () => {
-            totalPriceDiv.innerHTML = '';
-        })
+        console.log(totalSum);
+        if(totalSum){
+            totalSum.appendChild(totalPriceDiv);
+        }
+        if(btnClear){
+            btnClear.addEventListener('click', () => {
+                totalPriceDiv.innerHTML = '';
+            })
+        }
+       
+       
     } else {
         console.error('No products found in local storage');
     }
@@ -57,8 +64,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (btnClear != null) {
       
         btnClear.addEventListener('click', () => {
-            console.log("Hhhhhhhhhhhhhh");
-            localStorage.clear();
+            if (localStorage.getItem('products')) {
+                localStorage.removeItem('products');
+                console.log('Item "products" has been removed from localStorage.');
+            } else {
+                console.log('Item "products" does not exist in localStorage.');
+            }
             if (cartsOfCartPage) {
                 cartsOfCartPage.remove();
                 totalPrice=0;

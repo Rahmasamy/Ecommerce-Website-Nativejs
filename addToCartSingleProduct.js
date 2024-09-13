@@ -18,9 +18,9 @@ addProductBtn.addEventListener('click', async() => {
             // Extract product ID from the query string
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('id');
-
+            const isLoggedIn=localStorage.getItem('isLoggedIn');
             
-            if (productId) {
+            if (productId&&isLoggedIn) {
                 // Display the single product that was clicked.
                 const product = await fetchProduct(productId);
 

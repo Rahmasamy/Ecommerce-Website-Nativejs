@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .txt {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .left-icons .logo a {
+    text-decoration: none;
+  }
+  
+  .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .right-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .right-icons a:hover {
+    color: #ff8c00;
+  }
+  
+  .Profile {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    margin-top: 8rem;
+    /* background-color: #ff8c00; */
+  }
+  .ProfileSection {
+    /* background-color: aqua; */
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.795);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex; /* Flexbox container */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between image and text */
+    width: 100% !important;
+    justify-content: space-between;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .orange-things {
+    color: #ff8c00;
+  }
+  
+  .white-things {
+    color: #fff;
+  }
+  
+  .border-bottom {
+    border-bottom: 2px solid #ff8c00 !important;
+    
+  }
+  .row-section {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+  }
+  .img-section {
+    background-color: #333;
+  }
+  .card-img-body {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+  }
+  .img-fluid {
+    border-radius: 10px;
+    max-width: 100%; /* Ensure image scales within its container */
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .img-section img {
+    width: 100% !important;
+    height: 100% !important;
+    border: 3px solid;
+  }
+
+  .card-body {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+/* Style for the login prompt section */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13rem;
+}
+.login-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 6rem;
+    width: 70%;
+}
+
+/* Style for the text */
+.login-prompt p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for the login link */
+.login-link {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Style for the button */
+.check-login {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.check-login:hover {
+    background-color: #ff8c00;
+}
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .Profile {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .right-icons {
+      font-size: 16px;
+    }
+    
+    .card {
+      padding: 10px;
+      flex-direction: column; /* Stack image and text on smaller screens */
+    }
+  
+    .card-body {
+      text-align: center; /* Center text when stacked */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .Profile {
+      width: 100%;
+    }
+  
+    .card {
+      margin: 10px;
+    }
+  
+    .card-title {
+      font-size: 16px;
+    }
+  }
+  

@@ -55,6 +55,7 @@ import CardOperations from './CardOperations.js';
 
 export function assignCardData(product) {
     let Quantity;
+    const isLoggedIn=localStorage.getItem('isLoggedIn');
     const cardOps = CardOperations();
     if (cardOps.getFinalNum() != 0) {
         Quantity = cardOps.getFinalNum();
@@ -67,7 +68,7 @@ export function assignCardData(product) {
     const price = document.getElementById('pricecart');
     const cart = document.getElementById('cart');
 
-    if (Quantity) {
+    if (Quantity && isLoggedIn) {
         img.src = product.img;
         title.innerHTML = product.title;
         descrip.innerHTML = product.description;

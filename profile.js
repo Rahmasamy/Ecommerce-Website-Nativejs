@@ -1,21 +1,38 @@
 
 
-    // Function to display user info from local storage
-    function displayUserInfo() {
-        const firstName = localStorage.getItem("first_name") || "N/A";
-        const lastName = localStorage.getItem("last_name") || "N/A";
-        const userEmail = localStorage.getItem("email") || "N/A";
-        const userPhone = localStorage.getItem("phone") || "N/A";
-        const userGender = localStorage.getItem("gender") || "N/A";
+function displayUserInfo() {
+    const firstName = localStorage.getItem("first_name") || "N/A";
+    const lastName = localStorage.getItem("last_name") || "N/A";
+    const userEmail = localStorage.getItem("email") || "N/A";
+    const userPhone = localStorage.getItem("phone") || "N/A";
+    const userGender = localStorage.getItem("gender") || "N/A";
 
-        // Display user info
-        document.getElementById("user__name").innerText = `${firstName} ${lastName}`;
-        document.getElementById("user__email").innerText = userEmail;
-        console.log(document.getElementById("user__email"));
-        console.log(document.getElementById("user__name"));
-        document.getElementById("user__phone").innerText = userPhone;
-        document.getElementById("user__gender").innerText = userGender;
+    console.log(firstName);
+    console.log(lastName);
+
+    // Get elements
+    const nameElement = document.getElementById("user__name");
+    const emailElement = document.getElementById("user__email");
+    const phoneElement = document.getElementById("user__phone");
+    const genderElement = document.getElementById("user__gender");
+
+    // Check if elements exist before setting innerText
+    if (nameElement) {
+        nameElement.innerText = `${firstName} ${lastName}`;
     }
+    if (emailElement) {
+        emailElement.innerText = userEmail;
+    }
+    if (phoneElement) {
+        phoneElement.innerText = userPhone;
+    }
+    if (genderElement) {
+        genderElement.innerText = userGender;
+    }
+   
+    console.log(emailElement);
+    console.log(nameElement);
+}
 
     // Call the function to load user data initially
     displayUserInfo();
@@ -32,7 +49,8 @@
     }
 
 
-
+let logOut="";
+let logIn="";
 function logout() {
          localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('first_name');
@@ -40,7 +58,20 @@ function logout() {
             localStorage.removeItem('email');
             localStorage.removeItem('phone');
             localStorage.removeItem('gender');
-
             localStorage.removeItem('isLoggedIn');
+            localStorage.setItem("logOut","true");
             window.location.href = 'login.html';
         }
+logOut=localStorage.getItem("logOut");
+profile =document.getElementById("profile");
+if(logOut) {
+    if (profile) {
+        profile.style.display="none";
+    }
+
+}
+console.log(logOut)
+if (logOut == "false"){
+    console.log("login")
+    profile.style.display="block";
+}

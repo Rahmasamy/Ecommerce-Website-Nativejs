@@ -73,7 +73,10 @@ function cookieMessage() {
 
         // Set a cookie to remember the user
         setCookie("user", current_user.email, 30);
-
+       
+        localStorage.setItem("logOut","false");
+        localStorage.setItem('isLoggedIn',"true");
+       
         window.location.href = "profile.html";
     } else {
         alert("Login Failed");
