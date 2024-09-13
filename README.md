@@ -1,7 +1,7 @@
 
 # E-Commerce Website
 # Description
-This is an eCommerce website that allows users to browse products, add them to their cart, and complete purchases. The website provides a user-friendly interface for shopping, including features such as user authentication, product management, and order processing.
+This is an E-Commerce website that allows users to browse products, add them to their cart, and complete purchases. The website provides a user-friendly interface for shopping, including features such as user authentication, product management, and order processing.
 
 # Features
 User Authentication: Users can register, log in, and manage their profiles.
@@ -14,11 +14,10 @@ Frontend: HTML, CSS, JavaScript, Bootstrap, React.js/Angular
 Local Database: Local Storage
 Authentication: JWT, OAuth
 # Hosting: (Netlify)
-Installation
-To set up the project locally, follow these steps:
+
 
 # Clone the repository:
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/rahmasamy/Ecommerce-Website-Nativejs
 # Navigate to the project directory:
 cd your-repository
 
